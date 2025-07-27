@@ -1,0 +1,52 @@
+.navbar-cart-icon {
+    font-size: 1.15rem;
+}
+
+.navbar-menu-container svg {
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-right: 2rem;
+}
+
+.navbar-menu-container {
+    display: none;
+}
+
+.navbar-logo-container {
+    margin-left: 6rem;
+    color: white;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 180px;
+}
+
+.navbar-links-container a {
+    margin-right: 3rem;
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+@media (max-width: 800px) {
+    .nav-logo-container {
+        max-width: 140px;
+    }
+
+    .navbar-links-container {
+        display: none;
+    }
+
+    .navbar-menu-container {
+        display: flex;
+    }
+}
+
+@media (max-width: 1000px) {
+    .navbar-links-container a {
+        margin-right: 1rem;
+        font-size: 1rem;
+    }
+}

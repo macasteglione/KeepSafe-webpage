@@ -1,0 +1,31 @@
+.footer {
+	color: #ccc;
+	padding: 30px 20px;
+	text-align: center;
+	margin-top: 40px;
+}
+
+.footer-content {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.footer-logo {
+	font-size: 1.5rem;
+	font-weight: bold;
+	color: lightgreen;
+	margin-bottom: 15px;
+}
+
+.footer-links {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 15px;
+	margin-bottom: 15px;
+}
+
+.footer-copy {
+	font-size: 0.9rem;
+	color: #777;
+}
