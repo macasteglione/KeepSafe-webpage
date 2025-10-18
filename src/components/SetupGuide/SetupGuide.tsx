@@ -26,7 +26,7 @@ const SetupGuide = () => {
                 </ul>
 
                 <div className="setup-buttons-container">
-                    <a href="https://github.com/macasteglione/KeepSafe/releases/download/v1/KeepSafeV1.apk" className="secondary-button" download>
+                    <a href="https://github.com/macasteglione/KeepSafe/releases/latest/download/KeepSafe.apk" className="secondary-button" download>
                         Download APK
                     </a>
                 </div>

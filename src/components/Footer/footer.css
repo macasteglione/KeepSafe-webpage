@@ -1,20 +1,35 @@
 .footer {
-	color: #ccc;
-	padding: 30px 20px;
+	color: rgba(255, 255, 255, 0.7);
+	padding: 60px 20px;
 	text-align: center;
-	margin-top: 40px;
+	margin-top: 80px;
+	background: rgba(255, 255, 255, 0.02);
+	border-top: 1px solid rgba(74, 178, 79, 0.2);
+	backdrop-filter: blur(10px);
+	position: relative;
 }
 
 .footer-content {
 	max-width: 900px;
 	margin: 0 auto;
+	animation: fadeIn 0.8s ease-out;
 }
 
 .footer-logo {
-	font-size: 1.5rem;
-	font-weight: bold;
-	color: lightgreen;
-	margin-bottom: 15px;
+	font-size: 2rem;
+	font-weight: 800;
+	background: linear-gradient(135deg, #4ab24f, #5dd662);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	margin-bottom: 20px;
+	transition: all 0.3s ease;
+	cursor: default;
+}
+
+.footer-logo:hover {
+	filter: brightness(1.2);
+	transform: scale(1.05);
 }
 
 .footer-links {
@@ -26,6 +41,8 @@
 }
 
 .footer-copy {
-	font-size: 0.9rem;
-	color: #777;
+	font-size: 1rem;
+	color: rgba(255, 255, 255, 0.6);
+	line-height: 1.6;
+	margin-top: 10px;
 }

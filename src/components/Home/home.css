@@ -3,6 +3,7 @@
     display: flex;
     height: 100vh;
     padding-top: 8rem;
+    align-items: center;
 }
 
 .home-bannerImage-container {
@@ -11,11 +12,25 @@
     right: -170px;
     z-index: -2;
     max-width: 700px;
+    opacity: 0.6;
+    animation: pulse 4s ease-in-out infinite;
 }
 
 .home-image-section {
     max-width: 600px;
     flex: 1;
+    animation: slideInRight 0.8s ease-out;
+    position: relative;
+}
+
+.home-image-section img {
+    animation: float 6s ease-in-out infinite;
+    filter: drop-shadow(0 10px 30px rgba(74, 178, 79, 0.3));
+    transition: transform 0.3s ease;
+}
+
+.home-image-section img:hover {
+    transform: scale(1.05);
 }
 
 .home-text-section {
@@ -24,6 +39,22 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    animation: slideInLeft 0.8s ease-out;
+}
+
+.home-text-section h1 {
+    background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 4px 20px rgba(74, 178, 79, 0.2);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.home-text-section p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.8;
 }
 
 @media (max-width: 1000px) {
@@ -47,16 +78,35 @@
         flex-direction: column-reverse;
         align-items: center;
         justify-content: center;
+        padding-top: 6rem;
+        min-height: auto;
+        padding-bottom: 3rem;
     }
 
     .home-image-section {
         width: 100%;
-        max-width: 400px;
+        max-width: 350px;
+        margin-bottom: 2rem;
+    }
+
+    .home-image-section img {
+        animation: none;
     }
 
     .home-text-section {
         justify-content: center;
         align-items: center;
-        margin-top: 4rem;
+        margin-top: 2rem;
+        padding: 0 1rem;
+    }
+
+    .home-text-section h1 {
+        text-align: center;
+        font-size: clamp(1.8rem, 8vw, 3rem);
+    }
+
+    .home-text-section p {
+        text-align: center;
+        font-size: clamp(0.9rem, 4vw, 1.2rem);
     }
 }

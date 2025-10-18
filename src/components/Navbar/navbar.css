@@ -3,9 +3,16 @@
 }
 
 .navbar-menu-container svg {
-    font-size: 1.5rem;
-    cursor: pointer;
-    margin-right: 2rem;
+	font-size: 1.5rem;
+	cursor: pointer;
+	margin-right: 2rem;
+	color: white;
+	transition: all 0.3s ease;
+}
+
+.navbar-menu-container svg:hover {
+	color: #4ab24f;
+	transform: scale(1.1) rotate(90deg);
 }
 
 .navbar-menu-container {
@@ -13,25 +20,59 @@
 }
 
 .navbar-logo-container {
-    margin-left: 6rem;
-    color: white;
-    font-size: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 180px;
+	margin-left: 6rem;
+	color: white;
+	font-size: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 180px;
+	background: linear-gradient(135deg, #4ab24f, #5dd662);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	font-weight: 800;
+	transition: all 0.3s ease;
+}
+
+.navbar-logo-container:hover {
+	transform: scale(1.05);
+	filter: brightness(1.2);
 }
 
 .navbar-links-container a {
-    margin-right: 3rem;
-    text-decoration: none;
-    color: white;
-    font-size: 1.1rem;
-    font-weight: 600;
+	margin-right: 3rem;
+	text-decoration: none;
+	color: rgba(255, 255, 255, 0.85);
+	font-size: 1.1rem;
+	font-weight: 600;
+	position: relative;
+	transition: all 0.3s ease;
+	padding: 0.5rem 0;
+}
+
+.navbar-links-container a::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background: linear-gradient(90deg, #4ab24f, #5dd662);
+	transition: width 0.3s ease;
+}
+
+.navbar-links-container a:hover {
+	color: #4ab24f;
+	transform: translateY(-2px);
+}
+
+.navbar-links-container a:hover::after {
+	width: 100%;
 }
 
 @media (max-width: 800px) {
-    .nav-logo-container {
+    .navbar-logo-container {
         max-width: 140px;
     }
 
@@ -48,5 +89,22 @@
     .navbar-links-container a {
         margin-right: 1rem;
         font-size: 1rem;
+    }
+
+    .navbar-logo-container {
+        margin-left: 3rem;
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-logo-container {
+        margin-left: 1.5rem;
+        font-size: 1.5rem;
+    }
+
+    .navbar-menu-container svg {
+        font-size: 1.3rem;
+        margin-right: 1rem;
     }
 }

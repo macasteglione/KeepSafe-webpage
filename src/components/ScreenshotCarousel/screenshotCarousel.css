@@ -5,13 +5,17 @@
   text-align: center;
   position: relative;
   padding: 100px 10%;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 30px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 }
 
 .carousel-slide {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.4s ease;
+  transition: all 0.4s ease;
   padding: 0 10px;
 }
 
@@ -19,24 +23,42 @@
   height: 500px;
   width: auto;
   object-fit: contain;
-  border-radius: 16px;
-  transition: transform 0.3s ease;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  border: 2px solid rgba(74, 178, 79, 0.2);
+  opacity: 0.6;
 }
 
 .slick-center .carousel-image {
-  transform: scale(1.1);
+  transform: scale(1.15);
   opacity: 1;
   z-index: 2;
+  box-shadow: 0 15px 50px rgba(74, 178, 79, 0.4);
+  border-color: #4ab24f;
 }
 
 .slick-dots li button:before {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #4ab24f;
+  font-size: 14px;
 }
 
 .slick-prev:before,
 .slick-next:before {
-  color: #fff;
+  color: #4ab24f;
+  font-size: 30px;
+  opacity: 0.8;
+}
+
+.slick-prev:hover:before,
+.slick-next:hover:before {
+  opacity: 1;
+  color: #5dd662;
 }
 
 @media (max-width: 1024px) {
@@ -52,6 +74,7 @@
 @media (max-width: 768px) {
   .carousel-container {
     width: 95%;
+    padding: 60px 5%;
   }
 
   .carousel-slide {
@@ -59,14 +82,33 @@
   }
 
   .carousel-image {
-    height: 450px;
+    height: 400px;
     width: auto;
     opacity: 1;
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 24px;
   }
 }
 
 @media (max-width: 480px) {
+  .carousel-container {
+    padding: 40px 3%;
+  }
+
   .carousel-image {
-    height: 350px;
+    height: 320px;
+    border-radius: 15px;
+  }
+
+  .slick-center .carousel-image {
+    transform: scale(1.05);
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 20px;
   }
 }
